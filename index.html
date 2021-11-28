@@ -3,39 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images//favicon-32x32.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Frontend Mentor | NFT preview card component</title>
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container-wrapper">
+    <main class="container-wrapper">
         <div class="card-container">
           <div class="card-details-wrapper">
             <div class="card-image">
               <div class="card-active">
-                <img src="./images/icon-view.svg"/>
+                <img src="./images/icon-view.svg" alt="active-view" aria-hidden="true"/>
               </div>
-              <img alt = "card" src="./images/image-equilibrium.jpg"/>
+              <img alt = "equilibrium" src="./images/image-equilibrium.jpg" aria-hidden="true"/>
             </div>
-            <h4>Equilibrium #3429</h4>
+            <h1>Equilibrium #3429</h1>
             <p>Our Equilibrium collection promotes balance and calm.</p>
             <div class="card-specs">
               <div>
-                <img src="./images/icon-ethereum.svg" />
+                <img src="./images/icon-ethereum.svg" alt="ethereum" aria-hidden="true"/>
                 <span>0.041ETH</span>
               </div>
               <div>
-                <img src="./images/icon-clock.svg" />
+                <img src="./images/icon-clock.svg" alt="clock" aria-hidden="true"/>
                 <span>3 days left</span>
               </div>
             </div>
           </div>
           <div class="author-details">
-            <img src="./images/image-avatar.png" />
-            <span>Creation of <span>Jules Wyvern</span></span>
+            <img src="./images/image-avatar.png" alt="author-avatar" aria-hidden="true"/>
+            <span>Creation of <a href="#">Jules Wyvern</a href="#"></span>
           </div>
         </div>
-    </div>
+      </main>
 </body>
 </html>

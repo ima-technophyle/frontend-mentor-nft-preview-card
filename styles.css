@@ -1,0 +1,150 @@
+:root {
+    --bg-color : hsl(217, 54%, 11%);
+    --card-bg-color : hsl(216, 50%, 16%);
+    
+    --text-light-color : hsl(215, 51%, 70%);
+    --text-dark-color : hsl(178, 100%, 50%);
+
+    --line-color : hsl(215, 32%, 27%);
+
+    --active-state-color: hsl(178, 100%, 50%);
+    --active-state-bg-color: hsla(178, 100%, 50%, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    padding: 10px;
+}
+
+.card-container {
+    max-width: 330px;
+    height: 540px;
+    background-color: var(--card-bg-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card-details-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.card-container .card-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-container .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h4 {
+    cursor: pointer;
+    padding: 20px 0 10px 0;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--text-light-color);
+    padding: 10px 0 20px 0;
+}
+
+.card-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-specs div:first-child span{
+    font-weight: 600;
+    color: var(--text-dark-color);
+}
+
+.card-specs div span {
+    margin-left: 6px;
+    color: var(--text-light-color);
+}
+
+.card-specs div {
+    display: flex;
+    align-items: center;
+}
+
+.author-details {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.author-details img {
+    width: 25px;
+    height: 25px;
+}
+
+.author-details span {
+    color: var(--text-light-color);   
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.author-details span span {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+}
+
+.card-active {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--active-state-bg-color);
+    opacity: 0;
+}
+
+.card-active img {
+    width: 40px !important;
+    height: 40px !important;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+    pointer-events:none
+}
+
+.author-details span span:active,
+h4:active {
+    color: var(--active-state-color);
+}
+
+.card-active:active {
+    opacity: 1 ;
+}
